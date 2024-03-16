@@ -30,19 +30,7 @@
   <body>
     <div class="container">
     	<%@include file="navbar.jsp" %>
-    	<div>
-				<%
-					boolean i = (request.getParameter("Result") !=null);
-					if(i){
-						if(request.getParameter("Result").equals("success")){
-							%><p style="color:green;">Document Deleted Successfully</p><%
-						}
-						else if(request.getParameter("Result").equals("fail")){
-							%><p style="color:red;">Error whlie Deleting Note</p><%
-						}
-					}
-				%>
-			</div>
+    		
     	<%
     		Session currentSession = FactoryProvider.getSessionFactory().getCurrentSession();
     		Transaction tx = currentSession.beginTransaction();
@@ -59,7 +47,7 @@
 						    <h5 class="card-title"><%=notes.getNoteTitle() %></h5>
 						    <p class="card-text"><%=notes.getNoteDescription() %></p>
 						    	<div class="container text-center mt-2">
-						    		<a href="UpdateNoteServlet?noteId=<%=notes.getNoteId() %>" class="btn btn-primary">Update</a>
+						    		<a href="updateNote.jsp?noteId=<%=notes.getNoteId() %>" class="btn btn-primary">Update</a>
 						    		<a href="DeleteNoteServlet?noteId=<%=notes.getNoteId() %>" class="btn btn-danger">Delete</a>
 						    	</div>
 						  </div>
