@@ -48,7 +48,7 @@
 		</div>
 		
 	</form>
-	<div>
+			<div>
 				<%
 					boolean i = (request.getParameter("Result") !=null);
 					if(i){

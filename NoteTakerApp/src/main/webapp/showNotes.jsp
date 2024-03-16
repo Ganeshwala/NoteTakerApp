@@ -30,7 +30,19 @@
   <body>
     <div class="container">
     	<%@include file="navbar.jsp" %>
-    	
+    	<div>
+				<%
+					boolean i = (request.getParameter("Result") !=null);
+					if(i){
+						if(request.getParameter("Result").equals("success")){
+							%><p style="color:green;">Document Deleted Successfully</p><%
+						}
+						else if(request.getParameter("Result").equals("fail")){
+							%><p style="color:red;">Error whlie Deleting Note</p><%
+						}
+					}
+				%>
+			</div>
     	<%
     		Session currentSession = FactoryProvider.getSessionFactory().getCurrentSession();
     		Transaction tx = currentSession.beginTransaction();
