@@ -11,7 +11,7 @@
     <title>Note taker:Home Page</title>
   </head>
   <body>
-    <div class="container-fuild">
+    <div class="container">
     	<%@include file="navbar.jsp" %>
     </div>
 
