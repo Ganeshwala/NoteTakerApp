@@ -48,6 +48,19 @@
 		</div>
 		
 	</form>
+	<div>
+				<%
+					boolean i = (request.getParameter("Result") !=null);
+					if(i){
+						if(request.getParameter("Result").equals("success")){
+							%><p style="color:green;">Document Added Successfully</p><%
+						}
+						else if(request.getParameter("Result").equals("fail")){
+							%><p style="color:red;">Error whlie adding Document</p><%
+						}
+					}
+				%>
+			</div>
 		
 	</div>
 

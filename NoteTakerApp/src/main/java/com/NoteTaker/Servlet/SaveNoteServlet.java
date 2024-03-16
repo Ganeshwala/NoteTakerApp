@@ -43,9 +43,11 @@ public class SaveNoteServlet extends HttpServlet {
 				tx.commit();
 				session.close();
 				System.out.println("note save");
+				response.sendRedirect("addNote.jsp?Result=success");
 		} catch (Exception e) {
 			tx.rollback();
 			System.out.println("error occured while saving note object" + e.getMessage());
+			response.sendRedirect("addNote.jsp?Result=fail");
 		}
 
 	}

@@ -10,10 +10,10 @@
           <a class="nav-link active" aria-current="page" href="index.jsp">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="addNote.jsp">Add Note</a>
+          <a class="nav-link active" href="addNote.jsp">Add Note</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="showNotes.jsp" tabindex="-1" aria-disabled="true">Show Notes</a>
+          <a class="nav-link active" href="showNotes.jsp" tabindex="-1" aria-disabled="true">Show Notes</a>
         </li>
       </ul>
       <form class="d-flex">
